@@ -3,12 +3,12 @@ import java.awt.*;
 
 public abstract class AbstractScreen extends JPanel {
 
-    protected AbstractScreen() {
+    public AbstractScreen() {
         setLayout(new GridBagLayout());
         setBackground(Color.WHITE);
     }
 
-    protected void addRow(Component c, int gridY) {
+    public void addRow(Component c, int gridY) {
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = gridY;
@@ -16,7 +16,7 @@ public abstract class AbstractScreen extends JPanel {
         add(c, gbc);
     }
 
-    protected void addFillRow(Component c, int gridY, double weightY) {
+    public void addFillRow(Component c, int gridY, double weightY) {
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = gridY;
